@@ -85,6 +85,11 @@ export default {
           path: '/cate',
           name: '分类管理',
         },
+        {
+          id: 1,
+          path: '/tool',
+          name: '工具集合管理',
+        },
       ],
       isCollapse: false, // 是否折叠
       bigLogo: 'https://file.iviewui.com/admin-pro-dist/img/logo.7b8cc895.png',

@@ -19,9 +19,11 @@ const routes = [
         path: '/cate',
         name: '分类管理',
         component: () => import(/* webpackChunkName: "about" */ '@/views/Cate/index'),
-        meta: {
-          title: '分类管理'
-        },
+      },
+      {
+        path: '/tool',
+        name: '实用工具管理',
+        component: () => import(/* webpackChunkName: "about" */ '@/views/Tool/index'),
       }
     ]
   },
@@ -34,8 +36,8 @@ const router = new VueRouter({
 })
 router.beforeEach((to, from, next) => {
   /*路由发生变化修改页面title*/
-  if (to.meta.title) {
-    document.title = to.meta.title
+  if (to.name) {
+    document.title = to.name
   }
   next()
 });
